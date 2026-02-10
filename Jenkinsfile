@@ -51,7 +51,7 @@ pipeline {
             steps {
                 echo "Desplegando en STAGING (puerto ${STAGING_PORT})..."
                 // Levanta o actualiza solo el servicio staging
-                sh 'docker compose up -d web-staging'
+                sh 'docker-compose up -d web-staging'
                 echo "Staging actualizado. Verifica en: http://IP-VM:8081"
             }
         }
