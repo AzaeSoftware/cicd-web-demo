@@ -73,7 +73,7 @@ pipeline {
         stage('Deploy a Producción') {
             steps {
                 echo "Desplegando en PRODUCCIÓN (puerto ${PROD_PORT})..."
-                sh 'docker compose up -d web-production'
+                sh 'docker-compose up -d web-production'
                 echo "Producción actualizada. Verifica en: http://IP-VM:8082"
             }
         }
